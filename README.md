@@ -279,6 +279,14 @@ Decoding the Prediction: The model outputs a set of probabilities for different 
 Visualization: Finally, the code displays the original image and overlays the predicted class label as a title, allowing you to see the image and the model's interpretation side-by-side. It also hides the axis labels for a cleaner presentation.
 
 
+Application Building
+
+In this section, we will be building a web application that is integrated into the model we built. A UI is provided for the uses where he has to enter the values for predictions. The enter values are given to the saved model and prediction is showcased on the UI.
+This section has the following tasks
+Building HTML Pages
+Building server-side script
+
+
 
 
 
