@@ -260,8 +260,23 @@ Overall, MobileNetV2 offers an excellent trade-off between model size, speed, an
 
 Used MobileNetV2 to get the accuracy above 90% and even the loss is less as compared to other models.
 
+Testing The Model
+Model Testing is the process of evaluating the performance of a deep learning model on a dataset that it has not seen before. It is a crucial step in the development of any machine learning model, as it helps to determine how well the model can generalize to new data.
+<img width="835" alt="Screenshot 2024-07-12 at 8 53 49 PM" src="https://github.com/user-attachments/assets/3b9c4331-bd22-4c69-8f29-7285b7e727a9">
+
+<img width="811" alt="Screenshot 2024-07-12 at 8 55 56 PM" src="https://github.com/user-attachments/assets/f39117e1-f1d4-4c94-a471-f839fe49986e">
+
+<img width="1091" alt="Screenshot 2024-07-12 at 8 58 38 PM" src="https://github.com/user-attachments/assets/df21ab18-a703-4dd4-86cc-3af045f5d4a5">
 
 
+
+
+In the above code, we have tested the model with 5 classes 'combat', 'destroyed_building', 'fire', 'humanitarian', and 'vehicles'.
+Opening and Preprocessing: First, it opens an image ('/content/war_events/Combat/10.jpeg') and resizes it to a standard size (224x224 pixels) suitable for the machine learning model being used.
+Converting to Model Input: Then, it converts the image from a format understandable by humans (like a jpeg) to a numerical format (array) that the machine learning model can process. It also scales the pixel values between 0 and 1 for better model performance. Finally, it adds an extra dimension to the array to match the model's input requirements.
+Prediction Time: With the preprocessed image, the code feeds it to the model_new1 (presumably trained to recognize war events) to get predictions.
+Decoding the Prediction: The model outputs a set of probabilities for different categories (e.g., combat, destroyed building). The code identifies the category with the highest probability and retrieves the corresponding label from a predefined list (class_labels). This gives you the predicted class, which is the most likely war event depicted in the image.
+Visualization: Finally, the code displays the original image and overlays the predicted class label as a title, allowing you to see the image and the model's interpretation side-by-side. It also hides the axis labels for a cleaner presentation.
 
 
 
