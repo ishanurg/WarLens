@@ -67,6 +67,7 @@ War events classification | Kaggle...
 https://www.kaggle.com/datasets/saailna/war-events-classification
 
 CREATE TRAINING AND TESTING DATASET
+
 To build a DL model we have six classes in our dataset. But in the project dataset folder training and testing data are needed. So, in this case, we just have to assign a variable and pass the folder path to it.
 
 Three different transfer learning models are used in our project and the best model is selected.
