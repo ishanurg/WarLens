@@ -113,6 +113,10 @@ class_mode:
 
 <img width="1089" alt="Screenshot 2024-07-12 at 8 21 05 PM" src="https://github.com/user-attachments/assets/859868c1-f654-45da-921b-fc45dfd5cafc">
 
+
+
+
+
 EfficientNet B0 As A Feature Extractor
 EfficientNet B0 is a convolutional neural network architecture designed to achieve state-of-the-art performance while maintaining efficiency in terms of model size and computational resources. It was introduced by Google's research team in 2019. The "B0" variant represents the baseline model in the EfficientNet series.
 
@@ -142,6 +146,28 @@ EfficientNet B0 is particularly well-suited for tasks such as image classificati
 
 <img width="1259" alt="Screenshot 2024-07-12 at 8 27 26 PM" src="https://github.com/user-attachments/assets/dbcde45a-0d08-4e49-8637-a50bb4d3deab">
 
+
+
+
+
+InceptionV3 As A Feature Extractor
+InceptionV3 is a convolutional neural network designed by Google for image classification tasks. It features Inception modules, which efficiently capture features at different scales using parallel convolutional layers. Factorization techniques reduce the computational cost, and auxiliary classifiers aid in training. Pre-trained models are available for quick deployment in various computer vision applications.
+
+<img width="1252" alt="Screenshot 2024-07-12 at 8 30 16 PM" src="https://github.com/user-attachments/assets/ec48884e-9d74-48ed-b34a-49e8143dfead">
+
+<img width="1244" alt="Screenshot 2024-07-12 at 8 30 51 PM" src="https://github.com/user-attachments/assets/d91dfb30-e9c2-49fa-84e1-7af366b01b2b">
+
+
+
+
+Using here the pre-trained model, InceptionV3 named as inception_model.
+
+<img width="1247" alt="Screenshot 2024-07-12 at 8 31 34 PM" src="https://github.com/user-attachments/assets/5b3a8b35-a08a-492e-bb91-a783791e6d77">
+
+<img width="1261" alt="Screenshot 2024-07-12 at 8 31 53 PM" src="https://github.com/user-attachments/assets/8f752082-2034-4721-943e-31f862b2d0d5">
+
+
+The accuracy still is very low with InceptionV3, even if it's the same for all epochs.
 
 
 
