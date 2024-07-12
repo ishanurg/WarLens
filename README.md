@@ -193,6 +193,21 @@ The provided code initializes a pre-trained ResNet50 model with weights from Ima
 
 Here, the accuracy increased, but still, the loss is high so we will go for other models.
 
+Xception As A Feature Extractor
+Xception is a convolutional neural network architecture introduced by Google, known for its depthwise separable convolutions. It aims to improve upon traditional convolutional architectures by decoupling the spatial and channel-wise convolutions, thereby reducing computational complexity while maintaining or even enhancing performance. This design allows Xception to achieve state-of-the-art results on various computer vision tasks, including image classification and object detection, with a more efficient use of parameters and computational resources.
+<img width="1234" alt="Screenshot 2024-07-12 at 8 38 31 PM" src="https://github.com/user-attachments/assets/e953fc81-0b28-407e-a1f7-4c8bd2900e4d">
+
+<img width="1241" alt="Screenshot 2024-07-12 at 8 39 03 PM" src="https://github.com/user-attachments/assets/2c8d0270-ac51-4985-84f2-b9ffa423debf">
+
+
+The output for this is
+<img width="1248" alt="Screenshot 2024-07-12 at 8 39 24 PM" src="https://github.com/user-attachments/assets/d7fb5bf5-33b4-4e65-8128-535b30dc4fd9">
+
+<img width="1237" alt="Screenshot 2024-07-12 at 8 40 08 PM" src="https://github.com/user-attachments/assets/694b4301-53ac-40f4-85f6-40e3165ed0b9">
+
+
+
+So, here we are getting a decent accuracy of 79.9%. Let's check for other models if it is getting increased. 
 
 
 
