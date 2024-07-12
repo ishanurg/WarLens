@@ -228,6 +228,38 @@ Using DenseNet121, we are trying to build a model for better accuracy.
 
 So, the accuracy increased by 87% which is the more predictable model as compared to before.
 
+MobileNetV2 As A Feature Extractor
+MobileNetV2 is a lightweight convolutional neural network architecture optimized for mobile and embedded devices with limited computational resources. Developed by Google, it builds upon the original MobileNet architecture, introducing inverted residual blocks and linear bottlenecks to improve efficiency and performance.
+
+1. Inverted Residual Blocks:
+
+   MobileNetV2 introduces inverted residual blocks, which use lightweight depthwise separable convolutions with shortcut connections.
+   These blocks allow for efficient feature extraction by reducing the number of parameters while maintaining representational capacity.
+
+2. Linear Bottlenecks:
+
+    Linear bottlenecks are employed to prevent information loss during feature extraction.
+    This design choice enables MobileNetV2 to achieve higher accuracy compared to its predecessor while keeping computational costs low.
+
+3. Efficiency and Versatility:
+
+    MobileNetV2 is highly efficient, making it suitable for deployment on resource-constrained devices like smartphones and IoT devices.
+   It has been widely used for various computer vision tasks such as image classification, object detection, and semantic segmentation, balancing performance and resource requirements effectively.
+<img width="1235" alt="Screenshot 2024-07-12 at 8 47 11 PM" src="https://github.com/user-attachments/assets/de72335d-1744-456b-adab-2e42bdcf53b6">
+
+<img width="1236" alt="Screenshot 2024-07-12 at 8 47 34 PM" src="https://github.com/user-attachments/assets/2c2840cd-27d9-446a-b9dd-501b83815a9c">
+
+
+
+Overall, MobileNetV2 offers an excellent trade-off between model size, speed, and accuracy, making it a popular choice for real-time applications and scenarios where computational resources are limited.
+
+<img width="1250" alt="Screenshot 2024-07-12 at 8 48 05 PM" src="https://github.com/user-attachments/assets/176ebbe1-0840-4490-97cc-7a6ba3132ec4">
+
+<img width="1236" alt="Screenshot 2024-07-12 at 8 48 43 PM" src="https://github.com/user-attachments/assets/3151007d-bde2-4011-866a-fde57a58eee8">
+
+
+Used MobileNetV2 to get the accuracy above 90% and even the loss is less as compared to other models.
+
 
 
 
