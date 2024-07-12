@@ -173,6 +173,26 @@ The accuracy still is very low with InceptionV3, even if it's the same for all e
 
 
 
+ResNet50 As A Feature Extractor
+
+ResNet50 is a convolutional neural network architecture that belongs to the ResNet (Residual Network) family. It consists of 50 layers, including convolutional, pooling, and fully connected layers. ResNet50 is renowned for its deep structure, utilizing residual connections to address the vanishing gradient problem during training. These connections allow for easier training of deep networks by facilitating the flow of gradients, enabling better performance in tasks such as image classification and object detection. ResNet50 has been widely adopted in computer vision tasks due to its effectiveness and efficiency.
+
+<img width="1237" alt="Screenshot 2024-07-12 at 8 34 15 PM" src="https://github.com/user-attachments/assets/15363265-93c9-4965-ab90-aab34c4af753">
+
+<img width="1242" alt="Screenshot 2024-07-12 at 8 34 43 PM" src="https://github.com/user-attachments/assets/ac36448d-fd14-4e05-a333-b04025947370">
+
+
+
+The provided code initializes a pre-trained ResNet50 model with weights from ImageNet, freezes its layers to prevent further training, and adds additional layers for classification. It then compiles and trains the model on the provided training and test datasets for 15 epochs. This approach leverages the powerful feature extraction capabilities of ResNet50 for a specific classification task while customizing the output layers for the desired number of classes.
+
+<img width="1246" alt="Screenshot 2024-07-12 at 8 35 14 PM" src="https://github.com/user-attachments/assets/667cf7b5-f363-4084-8281-8b8528a4e6c1">
+
+<img width="1243" alt="Screenshot 2024-07-12 at 8 36 02 PM" src="https://github.com/user-attachments/assets/fa95de5a-116f-460d-9d4b-2c52704f408e">
+
+
+
+Here, the accuracy increased, but still, the loss is high so we will go for other models.
+
 
 
 
