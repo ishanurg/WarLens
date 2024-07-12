@@ -74,6 +74,12 @@ Three different transfer learning models are used in our project and the best mo
 
 The image input size of the model is 224,224.
 
+IMAGE PRE-PROCESSING
+
+Now it's time to Build input and output layers for the VGG16 model
+Hidden layers freeze because they have trained sequences, so changing the input and output layers.
+
+
 
 
 
