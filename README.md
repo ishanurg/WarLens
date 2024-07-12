@@ -209,6 +209,25 @@ The output for this is
 
 So, here we are getting a decent accuracy of 79.9%. Let's check for other models if it is getting increased. 
 
+DenseNet121 As A Feature Extractor
+DenseNet-121 is a convolutional neural network architecture designed for image classification tasks. It belongs to the Dense Convolutional Network (DenseNet) family, characterized by densely connected layers where each layer is connected to every other layer in a feed-forward fashion. This architecture facilitates feature reuse and encourages feature propagation throughout the network, leading to more efficient parameter usage and better gradient flow during training.
+<img width="1236" alt="Screenshot 2024-07-12 at 8 42 44 PM" src="https://github.com/user-attachments/assets/97541743-d306-4bbc-a4dd-cd9ce5690add">
+
+<img width="1230" alt="Screenshot 2024-07-12 at 8 43 11 PM" src="https://github.com/user-attachments/assets/ba15e1a0-7df3-4b26-84cf-8432cef11163">
+
+
+
+Using DenseNet121, we are trying to build a model for better accuracy.
+
+<img width="1252" alt="Screenshot 2024-07-12 at 8 43 54 PM" src="https://github.com/user-attachments/assets/315ddcdc-fafd-418f-bfa8-c49477b143ad">
+
+
+<img width="1240" alt="Screenshot 2024-07-12 at 8 44 27 PM" src="https://github.com/user-attachments/assets/9007af61-78d2-43eb-a1f9-f1c7651b8892">
+
+
+
+So, the accuracy increased by 87% which is the more predictable model as compared to before.
+
 
 
 
