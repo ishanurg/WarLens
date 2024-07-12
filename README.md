@@ -79,6 +79,26 @@ IMAGE PRE-PROCESSING
 Now it's time to Build input and output layers for the VGG16 model
 Hidden layers freeze because they have trained sequences, so changing the input and output layers.
 
+IMPORTING THE LIBRARIES
+Import the necessary libraries and modules as shown in the image
+<img width="1071" alt="Screenshot 2024-07-12 at 8 14 33 PM" src="https://github.com/user-attachments/assets/23f3570f-5683-4c2b-bb45-8bf9aad2b639">
+
+
+Configure ImageDataGenerator Class
+
+ImageDataGenerator class is instantiated and the configuration for the types of data augmentation
+There are five main types of data augmentation techniques for image data; specifically:
+Image shifts via the width_shift_range and height_shift_range arguments.
+The image flips via the horizontal_flip and vertical_flip arguments.
+Image rotations via the rotation_range argument
+Image shear via the shear_range argument.
+Image zoom via the zoom_range argument.
+An instance of the ImageDataGenerator class can be constructed for train and test. 
+
+<img width="1081" alt="Screenshot 2024-07-12 at 8 16 28 PM" src="https://github.com/user-attachments/assets/7dd154b5-a7fe-4190-988a-8622e2b7afb7">
+
+
+
 
 
 
