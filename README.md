@@ -138,6 +138,13 @@ EfficientNet B0 is particularly well-suited for tasks such as image classificati
 
 <img width="1234" alt="Screenshot 2024-07-12 at 8 24 13 PM" src="https://github.com/user-attachments/assets/08d8dca7-1e61-471f-8e98-9c6bef9da27c">
 
+<img width="1253" alt="Screenshot 2024-07-12 at 8 26 36 PM" src="https://github.com/user-attachments/assets/d4150a53-9d4a-4d9f-a684-af614713a89d">
+
+<img width="1259" alt="Screenshot 2024-07-12 at 8 27 26 PM" src="https://github.com/user-attachments/assets/dbcde45a-0d08-4e49-8637-a50bb4d3deab">
+
+
+
+
 
 
 
