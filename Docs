@@ -1,0 +1,200 @@
+Sure! Here's the documentation based on your provided README, integrating Flask and Streamlit, and enhancing it for clarity and completeness.
+
+---
+
+# WarLens: Transfer Learning For Event Classification In Conflict Zones
+
+## Overview
+
+WarLens is an innovative project utilizing transfer learning techniques to classify events in conflict zones by analyzing multimedia data such as images and videos. By leveraging pre-trained deep learning models and fine-tuning them on data specific to conflict zones, WarLens can accurately identify and classify various events such as protests, military activities, humanitarian crises, and infrastructure damage.
+
+### Use Cases
+
+1. *Non-Governmental Organization (NGO)*:
+    - NGOs can monitor social media and news outlets for reports of violence and human rights abuses. WarLens provides a tool to automatically analyze multimedia content and classify events, enabling rapid response and intervention to assist affected populations and document human rights violations.
+
+2. *Government Agency*:
+    - Government agencies responsible for monitoring security and stability in conflict-affected regions can integrate WarLens into their surveillance systems. By analyzing live feeds from security cameras and drones, they can detect and classify relevant events in real-time, enabling timely deployment of resources and response teams to mitigate threats and maintain order.
+
+3. *Media Organization*:
+    - Media organizations reporting on developments in conflict zones can use WarLens to verify the authenticity of user-generated content shared on social media platforms. This helps them analyze images and videos to confirm the occurrence of events and provide context for their reporting, enhancing the accuracy and credibility of their news coverage.
+
+## Technical Architecture
+
+![Technical Architecture](path/to/architecture/screenshot)
+
+## Pre-requisites
+
+To complete this project, you need the following software, concepts, and packages:
+
+- *Anaconda Navigator and PyCharm/Spyder*:
+  - [Anaconda Navigator](https://www.anaconda.com/products/distribution)
+  - [PyCharm](https://youtu.be/1ra4zH2G4o0)
+  - [Spyder](https://youtu.be/5mDYijMfSzs)
+
+- *Python packages*:
+  Open the Anaconda prompt as an administrator and execute the following commands:
+  sh
+  pip install numpy
+  pip install pandas
+  pip install tensorflow==2.3.2
+  pip install keras==2.3.1
+  pip install Flask
+  
+
+## Project Objectives
+
+By the end of this project, you’ll understand the following:
+- Preprocessing images
+- Applying transfer learning algorithms to a dataset
+- How deep neural networks detect fake images
+- How to determine the accuracy of the model
+- Building web applications using the Flask framework
+
+## Project Flow
+
+1. The user interacts with the UI to choose an image.
+2. The chosen image is analyzed by the model integrated with the Flask application.
+3. The model analyzes the image, and the prediction is displayed on the Flask UI.
+
+## Steps to Accomplish This Project
+
+### Data Collection
+- Dataset: [War events classification | Kaggle](https://www.kaggle.com/datasets/saailna/war-events-classification)
+
+### Create Training and Testing Dataset
+
+To build a DL model, we have six classes in our dataset. Assign a variable and pass the folder path to it for training and testing data.
+
+### Image Pre-processing
+
+- Build input and output layers for the VGG16 model.
+- Freeze hidden layers as they have trained sequences, changing only the input and output layers.
+
+### Importing Libraries
+
+Import the necessary libraries and modules for the project.
+
+### Configure ImageDataGenerator Class
+
+Use the ImageDataGenerator class to perform data augmentation. Techniques include:
+- Image shifts via the width_shift_range and height_shift_range arguments.
+- Image flips via the horizontal_flip and vertical_flip arguments.
+- Image rotations via the rotation_range argument.
+- Image shear via the shear_range argument.
+- Image zoom via the zoom_range argument.
+
+### Apply ImageDataGenerator Functionality
+
+Apply the ImageDataGenerator functionality to the training and validation datasets using the keras.preprocessing.image_dataset_from_directory function.
+
+### Model Building
+
+Use different transfer learning models such as EfficientNet B0, InceptionV3, ResNet50, Xception, DenseNet121, and MobileNetV2. Select the best model based on accuracy and loss.
+
+### Model Compilation and Training
+
+Compile and train the model on the training data. Example:
+python
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(train_data, epochs=10, validation_data=validation_data)
+
+
+### Save and Test the Model
+
+Save the trained model and test its accuracy and loss on a separate test dataset.
+
+## Application Building
+
+### HTML Page
+
+Create an HTML file for the UI where the user can upload images for prediction.
+
+### Server-side Script
+
+Create a Flask application to handle the uploaded images and return the prediction.
+
+### Flask Application (app.py)
+python
+from flask import Flask, request, jsonify
+from PIL import Image
+import io
+import model  # Assuming model.py contains your ML model
+
+app = Flask(__name__)
+
+@app.route('/api/predict', methods=['POST'])
+def predict():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    try:
+        img = Image.open(io.BytesIO(file.read()))
+        # Preprocess the image as required by your model
+        prediction = model.predict(img)
+        return jsonify({'prediction': prediction})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+### Streamlit Application (streamlit.py)
+python
+import streamlit as st
+import requests
+from PIL import Image
+
+st.title('Image Classification with Streamlit and Flask')
+
+uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+
+if uploaded_file is not None:
+    image = Image.open(uploaded_file)
+    st.image(image, caption='Uploaded Image.', use_column_width=True)
+    
+    # Convert the image to bytes
+    img_bytes = uploaded_file.getvalue()
+    
+    # Update the URL to your Vercel deployment
+    url = "https://your-vercel-deployment-url/api/predict"
+    
+    response = requests.post(url, files={"file": img_bytes})
+    
+    if response.status_code == 200:
+        prediction = response.json().get('prediction')
+        st.write(f'Prediction: {prediction}')
+    else:
+        st.write('Error:', response.json().get('error'))
+
+
+### Vercel Configuration (vercel.json)
+json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel/app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/vercel/app.py"
+    }
+  ]
+}
+
+
+## Conclusion
+
+WarLens utilizes advanced deep learning models for classifying events in conflict zones. By integrating this project with Flask and Streamlit, users can interact with the model through a web interface, making it accessible and useful for various real-world applications.
+
+For any further queries or contributions, please refer to the contact details or resources provided in the project repository.
