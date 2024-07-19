@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url("path/to/your/background.jpg"); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            max-width: 800px; /* Adjust max-width as needed */
+            border: none;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Prominent shadow */
+            background-color: #fff; /* White card background */
+            border-radius: 15px; /* Rounded corners */
+            animation: pulse 1.5s infinite ease-in-out; /* Optional pulse animation */
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .card-header {
+            background-color: #e74c3c; /* Red header background */
+            color: white;
+            padding: 2.5rem 1rem; /* Increased padding */
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+        }
+        .card-body {
+            padding: 3rem; /* Increased padding */
+        }
+        .btn-result {
+            background-color: #3498db; /* Blue button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 1.5rem 4rem; /* Increased button size */
+            font-size: 1.6rem; /* Increased button font size */
+            transition: all 0.3s ease-in-out; /* Smooth hover effect */
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-result::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #e74c3c; /* Red background for hover effect */
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-result:hover::before {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  <div class="card text-center">
+            <div class="card-header">
+                <h1>Prediction Result</h1>
+            </div>
+            <div class="card-body">
+                <p class="h3">The model predicts: {{ label }}</p>
+                <p>Confidence: {{ confidence }}%</p>
+            </div>
+            <div class="card-footer text-muted">
+                <a href="{{ url_for('upload_form') }}" class="btn btn-result">Upload another image</a>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384
