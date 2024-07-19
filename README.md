@@ -286,6 +286,18 @@ This section has the following tasks
 Building HTML Pages
 Building server-side script
 
+<img width="1440" alt="Screenshot 2024-07-20 at 12 36 32 AM" src="https://github.com/user-attachments/assets/78915fbd-5ba8-469b-a7b4-688ad1eec5ef">
+
+<img width="1440" alt="Screenshot 2024-07-20 at 12 57 07 AM" src="https://github.com/user-attachments/assets/9d2d42dd-b62e-4616-b273-b5d39c4b61a5">
+
+<img width="1436" alt="Screenshot 2024-07-20 at 12 57 42 AM" src="https://github.com/user-attachments/assets/5e5a41c7-ab3e-4bba-bff5-9a39ccd9efb3">
+
+<img width="898" alt="Screenshot 2024-07-20 at 12 25 09 AM" src="https://github.com/user-attachments/assets/ec267155-b50d-4045-bf10-10dddda1aba4">
+
+<img width="1187" alt="Screenshot 2024-07-20 at 12 26 12 AM" src="https://github.com/user-attachments/assets/18cb695d-fbd3-4511-ba2b-5a5fde86fc85">
+
+
+
 
 
 
