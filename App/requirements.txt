@@ -1,0 +1,6 @@
+Python 3.12
+Flask //Latest Version
+Tensorflow
+Keras Model
+Pandas
+Numpy
