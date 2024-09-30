@@ -1,4 +1,4 @@
-WarLens: Transfer Learning For Event Classification In Conflict Zones
+# WarLens: Transfer Learning For Event Classification In Conflict Zones
 WarLens is an innovative project utilizing transfer learning techniques to classify events in conflict zones by analyzing multimedia data such as images and videos. By leveraging pre-trained deep learning models and fine-tuning them on data specific to conflict zones, WarLens can accurately identify and classify various events such as protests, military activities, humanitarian crises, and infrastructure damage.
 
 Scenario 1: In a conflict zone, a non-governmental organization (NGO) is monitoring social media and news outlets for reports of violence and human rights abuses. WarLens provides them with a tool to automatically analyze multimedia content and classify events, enabling rapid response and intervention to assist affected populations and document human rights violations.
